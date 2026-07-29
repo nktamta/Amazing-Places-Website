@@ -1,166 +1,628 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Amazing Places</title>
+/* ===========================
+   RESET
+=========================== */
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<body>
+html{
+    scroll-behavior:smooth;
+}
 
-    <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.7;
+}
 
-    <!-- Header -->
-    <header>
+/* ===========================
+   SKIP LINK
+=========================== */
 
-        <div class="logo">
-            <h1>🌍 Discover Amazing Places</h1>
-            <p>Explore • Dream • Travel</p>
-        </div>
+.skip-link{
+    position:absolute;
+    left:20px;
+    top:-60px;
+    background:#0f172a;
+    color:#fff;
+    padding:12px 18px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+    z-index:1000;
+}
 
-        <!-- Navigation -->
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="places.html">Destinations</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
+.skip-link:focus{
+    top:20px;
+}
 
-    </header>
+/* ===========================
+   HEADER
+=========================== */
 
-    <!-- Main Content -->
-    <main id="main-content">
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    padding:25px 8%;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
 
-        <!-- Hero Section -->
-        <section class="hero">
+.logo{
+    text-align:center;
+}
 
-            <div class="hero-text">
+.logo h1{
+    font-size:2.3rem;
+    margin-bottom:8px;
+}
 
-                <h2>Discover the World's Most Beautiful Places</h2>
+.logo p{
+    opacity:.85;
+    letter-spacing:2px;
+}
 
-                <p>
-                    From snowy mountains and crystal-clear lakes to tropical beaches
-                    and peaceful forests, every destination has a story waiting to
-                    be discovered. Let your next adventure begin here.
-                </p>
+/* ===========================
+   NAVIGATION
+=========================== */
 
-                <a href="places.html" class="btn">Explore Destinations →</a>
+nav{
+    margin-top:25px;
+}
 
-            </div>
+.nav-menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style:none;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-            <div class="hero-image">
+.nav-menu a{
 
-                <img src="images/mountain.jpg"
-                    alt="Snow-covered mountains during sunrise">
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.35s;
 
-            </div>
+}
 
-        </section>
+.nav-menu a:hover{
 
-        <!-- Featured Destinations -->
-        <section class="featured">
+    background:white;
+    color:#1e3a8a;
+    transform:translateY(-3px);
 
-            <h2>Featured Destinations</h2>
+}
 
-            <div class="featured-cards">
+.active{
 
-                <article class="card">
+    background:#0ea5e9;
+    color:white !important;
 
-                    <img src="images/mountain.jpg"
-                        alt="Swiss Alps mountains">
+}
 
-                    <h3>Swiss Alps</h3>
+/* ===========================
+   MAIN
+=========================== */
 
-                    <p>
-                        Experience breathtaking mountain landscapes,
-                        snowy peaks, and unforgettable hiking trails.
-                    </p>
+main{
 
-                </article>
+    width:90%;
+    max-width:1250px;
+    margin:60px auto;
 
-                <article class="card">
+}
 
-                    <img src="images/beach.jpg"
-                        alt="Maldives beach">
+/* ===========================
+   HERO
+=========================== */
 
-                    <h3>Maldives</h3>
+.hero{
 
-                    <p>
-                        Relax on white sandy beaches surrounded by
-                        crystal-clear turquoise waters.
-                    </p>
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    margin-bottom:90px;
+    flex-wrap:wrap;
 
-                </article>
+}
 
-                <article class="card">
+.hero-text{
 
-                    <img src="images/city.jpg"
-                        alt="Kyoto city in Japan">
+    flex:1;
 
-                    <h3>Kyoto</h3>
+}
 
-                    <p>
-                        Explore ancient temples, peaceful gardens,
-                        and Japan's rich cultural heritage.
-                    </p>
+.hero-text h2{
 
-                </article>
+    font-size:3rem;
+    color:#0f172a;
+    margin-bottom:20px;
 
-            </div>
+}
 
-        </section>
+.hero-text p{
 
-        <!-- Why Travel -->
-        <section class="why-travel">
+    font-size:1.1rem;
+    margin-bottom:30px;
+    color:#555;
 
-            <h2>Why Travel?</h2>
+}
 
-            <div class="travel-boxes">
+/* ===========================
+   BUTTON
+=========================== */
 
-                <div class="box">
-                    <h3>🌍 Explore Nature</h3>
-                    <p>
-                        Discover mountains, beaches, forests,
-                        lakes and deserts across the globe.
-                    </p>
-                </div>
+.btn{
 
-                <div class="box">
-                    <h3>📸 Capture Memories</h3>
-                    <p>
-                        Every journey creates unforgettable
-                        experiences worth remembering forever.
-                    </p>
-                </div>
+    display:inline-block;
+    background:#0284c7;
+    color:white;
+    text-decoration:none;
+    padding:15px 32px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.35s;
 
-                <div class="box">
-                    <h3>✈ Adventure Awaits</h3>
-                    <p>
-                        Step outside your comfort zone and
-                        discover something new every day.
-                    </p>
-                </div>
+}
 
-            </div>
+.btn:hover{
 
-        </section>
+    background:#f97316;
+    transform:translateY(-4px);
 
-    </main>
+}
 
-    <!-- Footer -->
-    <footer>
+/* ===========================
+   HERO IMAGE
+=========================== */
 
-        <p>
-            © 2026 Discover Amazing Places 
-        </p>
+.hero-image{
 
-    </footer>
+    flex:1;
 
-</body>
+}
 
-</html>
+.hero-image img{
+
+    width:100%;
+    border-radius:20px;
+    border:6px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+
+/* ===========================
+   GLOBAL IMAGE STYLE
+=========================== */
+
+img{
+
+    width:100%;
+    display:block;
+    border-radius:18px;
+    border:4px solid white;
+    padding:4px;
+    transition:.4s;
+    object-fit:cover;
+
+}
+
+img:hover{
+
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+
+}
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+
+section h2{
+
+    text-align:center;
+    font-size:2.2rem;
+    color:#0f172a;
+    margin-bottom:18px;
+
+}
+
+.page-banner{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.page-banner p{
+
+    max-width:700px;
+    margin:auto;
+    color:#666;
+
+}
+
+/* ===========================
+   FEATURED CARDS
+=========================== */
+
+.featured{
+
+    margin-bottom:90px;
+
+}
+
+.featured-cards{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+
+}
+
+.card{
+
+    background:white;
+    width:340px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    height:220px;
+
+}
+
+.card h3{
+
+    margin:20px;
+
+}
+
+.card p{
+
+    margin:0 20px 25px;
+    color:#666;
+
+}
+
+/* ===========================
+   WHY TRAVEL
+=========================== */
+
+.why-travel{
+
+    margin-bottom:90px;
+
+}
+
+.travel-boxes{
+
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:35px;
+
+}
+
+.box{
+
+    background:white;
+    width:320px;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.35s;
+
+}
+
+.box:hover{
+
+    background:#0284c7;
+    color:white;
+    transform:translateY(-8px);
+
+}
+
+.box p{
+
+    margin-top:15px;
+
+}
+
+/* ===========================
+   DESTINATION CARDS
+=========================== */
+
+.destinations{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+
+}
+
+.destination-card{
+
+    width:360px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.35s;
+
+}
+
+.destination-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.destination-card img{
+
+    height:240px;
+
+}
+
+.card-content{
+
+    padding:22px;
+
+}
+
+.card-content h3{
+
+    margin-bottom:12px;
+
+}
+
+.card-content ul{
+
+    margin-top:18px;
+    margin-left:20px;
+
+}
+
+.card-content li{
+
+    margin-bottom:8px;
+
+}
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery {
+    margin-bottom: 80px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-grid figure {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: 0.4s;
+}
+
+.gallery-grid figure:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-grid img {
+    height: 240px;
+}
+
+/* nth-child Requirement */
+.gallery-grid figure:nth-child(odd) {
+    background: #dbeafe;
+    transform: rotate(-3deg);
+}
+
+.gallery-grid figure:nth-child(even) {
+    background: #fff4e6;
+    transform: rotate(3deg);
+}
+
+.gallery-grid figcaption {
+    padding: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* ===========================
+   GALLERY INFO
+=========================== */
+
+.gallery-info {
+    background: white;
+    margin-top: 70px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-info p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    color: #666;
+}
+
+/* ===========================
+   TRAVEL TIPS
+=========================== */
+
+.travel-tips {
+    margin-top: 80px;
+}
+
+.tips-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.tip {
+    width: 320px;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    transition: 0.3s;
+}
+
+.tip:hover {
+    background: #0ea5e9;
+    color: white;
+    transform: translateY(-8px);
+}
+
+.tip h3 {
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 70px;
+}
+
+footer p {
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 992px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 2.4rem;
+    }
+
+    .featured-cards,
+    .travel-boxes,
+    .tips-container,
+    .destinations {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .card,
+    .box,
+    .tip,
+    .destination-card {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+    }
+
+    .page-banner h2,
+    section h2 {
+        font-size: 1.7rem;
+    }
+
+}
+.skip-link{
+    position:absolute;
+    left:-9999px;
+    top:auto;
+}
+
+.skip-link:focus{
+    left:20px;
+    top:20px;
+}
+.nav-menu a:focus{
+    outline:3px solid yellow;
+    outline-offset:3px;
+}
