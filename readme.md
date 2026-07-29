@@ -135,9 +135,9 @@ The website is optimized for:
 
 View the live website here:
 
-**https://YOUR-USERNAME.github.io/Discover-Amazing-Places/**
+**[https://YOUR-USERNAME.github.io/Discover-Amazing-Places/](https://nktamta.github.io/Amazing-Places-Website/)**
 
-> Replace `YOUR-USERNAME` with your GitHub username after publishing the project using GitHub Pages.
+
 
 
 ---
