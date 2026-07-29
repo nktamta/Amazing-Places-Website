@@ -131,16 +131,6 @@ The website is optimized for:
 
 ---
 
-## 🌐 Live Demo
-
-View the live website here:
-
-**[https://YOUR-USERNAME.github.io/Discover-Amazing-Places/](https://nktamta.github.io/Amazing-Places-Website/)**
-
-
-
-
----
 
 ## 👨‍💻 Author
 
